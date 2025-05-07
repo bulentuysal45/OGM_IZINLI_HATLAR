@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>OGM Web Haritası</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+  <!-- Dosya seçme menüsü -->
+  <div class="toolbar">
+    <select id="jsonSelector">
+      <option value="">-- Hat/Dosya Seçiniz --</option>
+      <option value="BIGA-CAN_66KV.json">BIGA-CAN_66KV</option>
+      <option value="BIGA-GONEN_66KV.json">BIGA-GONEN_66KV</option>
+      <option value="BIGATM-ICTAS.json">BIGATM-ICTAS</option>
+      <option value="CAMIALANKOK_CAMIALANKOY.json">CAMIALANKOK_CAMIALANKOY</option>
+      <option value="CENAL.json">CENAL</option>
+      <option value="CENAL2.json">CENAL2</option>
+      <option value="CESMEALTI.json">CESMEALTI</option>
+      <option value="CIHADIYE_KOK-DIKMEN-HARMANLI.json">CIHADIYE_KOK-DIKMEN-HARMANLI</option>
+      <option value="CIHADIYEKOK_BAKACAK_BEZIRGANLAR.json">CIHADIYEKOK_BAKACAK_BEZIRGANLAR</option>
+      <option value="CIHADIYEKOK_KAHVETEPE.json">CIHADIYEKOK_KAHVETEPE</option>
+      <option value="GULEC_KAYAPINAR_HHYAYLASI_ORTULUCE.json">GULEC_KAYAPINAR_HHYAYLASI_ORTULUCE</option>
+      <option value="GURCESME_KAZMALI.json">GURCESME_KAZMALI</option>
+      <option value="HACIPEHLIVAN_KAVAKALAN.json">HACIPEHLIVAN_KAVAKALAN</option>
+      <option value="ICDAS-CARDAK.json">ICDAS-CARDAK</option>
+      <option value="KAPANBELENKOK_ELMALI_YESILKOY_KAYNARCA_ISIKELI_CAMIALAN_YOLINDI_SARNIC_ILICABASI.json">KAPANBELENKOK_ILICABASI</option>
+      <option value="KAZMALI_BEYCAYIR.json">KAZMALI_BEYCAYIR</option>
+      <option value="KOZCESME_COMLEKCI.json">KOZCESME_COMLEKCI</option>
+      <option value="OSMANIYE_GUVEMALAN.json">OSMANIYE_GUVEMALAN</option>
+      <option value="OSMANIYEKOK_ANBAROBA.json">OSMANIYEKOK_ANBAROBA</option>
+      <option value="OSMANIYEKOK_HOSOBA.json">OSMANIYEKOK_HOSOBA</option>
+      <option value="RAMAZANLAR_AHMETLER_PASACAYI_ESELEK_GURCESME.json">RAMAZANLAR_AHMETLER_PASACAYI_ESELEK_GURCESME</option>
+      <option value="RAMAZANLAR_PASACAYI_AHMETLER.json">RAMAZANLAR_PASACAYI_AHMETLER</option>
+      <option value="SAHMELEK.json">SAHMELEK</option>
+      <option value="SARIKAYA-EYBEKLI_SARISIVAT.json">SARIKAYA-EYBEKLI_SARISIVAT</option>
+      <option value="SELVI_DM-KOZCESME-CATALTEPE-DISBUDAK.json">SELVI_DM-KOZCESME-CATALTEPE-DISBUDAK</option>
+      <option value="SELVIDM_DANISMENT.json">SELVIDM_DANISMENT</option>
+      <option value="SELVI-KEMER.json">SELVI-KEMER</option>
+      <option value="YENICEKOY-BAKACAKCIFTLIGI.json">YENICEKOY-BAKACAKCIFTLIGI</option>
+      <option value="YOLINDI_TAHTALI.json">YOLINDI_TAHTALI</option>
+      <option value="hepsini-goster">Tüm Dosyaları Göster</option>
+    </select>
+  </div>
+
+  <!-- Harita alanı -->
+  <div id="map"></div>
+
+  <!-- Sağ üstteki kontrol butonları -->
+  <div class="control-buttons">
+    <button id="homeButton" title="Ana Ekran">🏠</button>
+  </div>
+
+  <!-- Ölçüm butonu -->
+  <div class="measure-control">
+    <button id="measureButton" title="Ölçüm Aracı">📏</button>
+  </div>
+
+  <!-- Altlık harita geçişi - artık sol altta -->
+  <div class="basemap-control">
+    <button id="basemapToggle">Harita / Uydu</button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
